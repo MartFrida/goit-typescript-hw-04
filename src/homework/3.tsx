@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 export function FormComponent() {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState<string>("");
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     setValue(event.target.value);
   };
 
@@ -11,3 +11,4 @@ export function FormComponent() {
     <input type="text" value={value} onChange={handleChange} />
   );
 }
+
